@@ -1,0 +1,29 @@
+/*Navigation Bar*/
+
+.bar {
+  color: #fff;
+  background-color: #02335e;
+}
+
+.ion-ios-arrow-back {
+  color: #fff;
+}
+
+
+
+/*Dashboard*/
+
+div.spacer {
+  width: 300px;
+  height: 30px;
+}
+div.brand {
+  text-align: center;
+}
+#navy-icon {
+  color: #02335e;
+}
+#navy-icon:hover {
+  color: #c228a2;
+}
+
