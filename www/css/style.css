@@ -4,11 +4,12 @@
   color: #fff;
   background-color: #02335e;
 }
-
 .ion-ios-arrow-back {
   color: #fff;
 }
-
+.ion-ios-arrow-back:hover {
+  color: #c228a2;
+}
 
 
 /*Dashboard*/
@@ -24,6 +25,53 @@ div.brand {
   color: #02335e;
 }
 #navy-icon:hover {
+  color: #c228a2;
+}
+
+/*About*/
+
+div.row {
+  margin-bottom: 0;
+}
+
+.about-card {
+  color: #fff;
+  background-color: #02335e;
+  text-align: center;
+}
+span.card-title {
+  text-align: center;
+}
+div.card-action a {
+  text-align: center;
+  display: block;
+}
+div.card-action p {
+  text-align: left;
+}
+a#email-links {
+  padding-top: 10px;
+  color: #fff;
+  text-transform: none;
+}
+a#email-links:hover {
+  color: #c228a2;
+}
+i {
+  padding-right: 10px;
+}
+i.icon.ion-ribbon-b,
+i.icon.ion-android-arrow-dropright-circle,
+i.icon.ion-email,
+i.icon.ion-ios-people {
+  font-size: 32px;
+}
+a#info-link {
+  color: #fff;
+  float: right;
+  text-transform: none;
+}
+a#info-link:hover {
   color: #c228a2;
 }
 
