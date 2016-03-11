@@ -21,6 +21,13 @@ div.spacer {
 div.brand {
   text-align: center;
 }
+div#touch-pad {
+  background-color: rgba(188, 209, 210, 0.62);
+  border-radius: 10px;
+  box-shadow: inset 0px 0px 10px rgba(0,0,0,0.3);
+  padding-bottom: 20px;
+  margin: 30px;
+}
 #navy-icon {
   color: #02335e;
 }
@@ -28,16 +35,28 @@ div.brand {
   color: #c228a2;
 }
 
+.button-large.icon:before,
+.button-large.icon-left:before,
+.button-large.icon-right:before {
+  font-size: 48px;
+}
+
 /*About*/
 
 div.row {
   margin-bottom: 0;
+}
+div.card-action.involved p {
+  text-align: center;
+  font-style: italic;
 }
 
 .about-card {
   color: #fff;
   background-color: #02335e;
   text-align: center;
+  border-radius: 10px;
+  box-shadow: inset 0px 0px 10px rgba(0,0,0,0.3);
 }
 span.card-title {
   text-align: center;
