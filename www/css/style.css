@@ -41,6 +41,12 @@ div#touch-pad {
   font-size: 48px;
 }
 
+/* Resources */
+.item-thumbnail-left > img:first-child, .item-thumbnail-left .item-image, .item-thumbnail-left .item-content > img:first-child, .item-thumbnail-left .item-content .item-image {
+  width: 120px;
+  height: 80px;
+}
+
 /*About*/
 
 div.row {
