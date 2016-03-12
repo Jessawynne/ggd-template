@@ -8,6 +8,10 @@ angular.module('app.controllers', [])
 
 })
 
+.controller('resourcesCtrl', function($scope) {
+
+})
+
 .controller('aboutCtrl', function($scope) {
 
 })
