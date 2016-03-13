@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Patrick+Hand);
+
 /*Navigation Bar*/
 
 .bar {
@@ -11,6 +13,10 @@
   color: #c228a2;
 }
 
+/* Header Titles*/
+ion-view.title {
+  font-family: 'Patrick Hand', cursive;
+}
 
 /*Dashboard*/
 
@@ -57,10 +63,11 @@ i.icon.ion-university {
   font-size: 32px;
 }
 span.card-title {
-  font-size: 24px;
-  font-weight: 300;
+  font-size: 32px;
+  font-weight: 500;
   text-align: center;
   color: #fff;
+  font-family: 'Patrick Hand', cursive;
 }
 a.item {
   background-color: #02335e;
@@ -114,8 +121,12 @@ div.card-action.involved p {
   border-radius: 10px;
   box-shadow: inset 0px 0px 10px rgba(0,0,0,0.3);
 }
+.card.card-title {
+  font-size: 32px;
+}
 span.card-title {
   text-align: center;
+  font-family: 'Patrick Hand', cursive;
 }
 div.card-action a {
   text-align: center;
