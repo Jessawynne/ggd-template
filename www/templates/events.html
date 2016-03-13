@@ -1,12 +1,19 @@
 <ion-view title="Events">
     <ion-content overflow-scroll="true" padding="true" class="has-header">
-        <h2>Girl Geek Dinners &amp;</h2>
-        <h2>Code + Pinot Nights</h2>
-        <form class="list">
-            <ion-toggle toggle-class="toggle-positive">Other Tech Events</ion-toggle>
-        </form>
-        <div style="line-height: 250px; border: 1px solid rgb(238, 238, 238); border-radius: 3px; text-align: center; background-color: rgb(255, 255, 255);">
-            <i class="icon ion-image" style="font-size: 64px; color: rgb(136, 136, 136); vertical-align: middle;"></i>
-        </div>
+      <ion-list ng-controller="eventsCtrl">
+        <ion-item ng-repeat="event in events" class="each-event">
+        <!-- class="item-thumbnail-left" -->
+          <i class="icon {{event.icon}}"></i>
+          <a ng-href="{{event.href}}"<h2>{{event.title}}</h2></a>
+          <p>{{event.date}}</p>
+          <p>{{event.time}}</p>
+          <p ng-href>{{event.description}}</p>
+        </ion-item>
+      </ion-list>
+
+      <a href="http://ggdnashville.com/past-dinners-workshops/"><button class="button button-full button-ggd">
+        More Past Events
+      </button></a>
+
     </ion-content>
 </ion-view>

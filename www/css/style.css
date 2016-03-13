@@ -46,6 +46,41 @@ div#touch-pad {
 .button-large.icon-right:before {
   font-size: 48px;
 }
+/* Calendar */
+ion-item.each-event {
+  border-radius: 10px;
+  margin: 20px;
+  background-color: rgba(188, 209, 210, 0.62);
+  border-radius: 10px;
+  box-shadow: inset 0px 0px 10px rgba(0,0,0,0.3);
+}
+a.ng-binding {
+  font-family: 'Patrick Hand', cursive;
+  font-size: 22px;
+  color: #02335e;
+}
+a.ng-binding:hover {
+  color: #c228a2;
+}
+i.ion-woman, i.ion-wineglass {
+   font-size: 32px;
+   color: #02335e;
+}
+p {
+  padding-left: 30px;
+}
+button.button.button-full.button-ggd {
+  font-family: 'Patrick Hand', cursive;
+  background-color: #fff;
+  font-size: 24px;
+  color: #c228a2;
+  border: #fff;
+  font-weight: 900;
+}
+button.button.button-full.button-ggd:hover {
+  font-size: 28px;
+  color: #02335e;
+}
 
 /* Resources */
 div#big-list {
