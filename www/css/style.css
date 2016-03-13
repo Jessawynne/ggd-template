@@ -42,9 +42,59 @@ div#touch-pad {
 }
 
 /* Resources */
+div#big-list {
+  border-radius: 10px;
+  margin: 10px;
+  padding: 20px 20px 0;
+  background-color: #02335e;
+}
+div.content {
+  text-align: center;
+  line-height: 48px;
+  margin-bottom: 10px;
+}
+i.icon.ion-university {
+  font-size: 32px;
+}
+span.card-title {
+  font-size: 24px;
+  font-weight: 300;
+  text-align: center;
+  color: #fff;
+}
+a.item {
+  background-color: #02335e;
+  color: #fff;
+  padding: 20px;
+  border: #02335e;
+  border-top: 1px solid rgba(160,160,160,0.2);
+  padding: 20px;
+}
+a.item img {
+  border-radius: 50px;
+  margin: 10px;
+  padding-bottom: 0;
+}
 .item-thumbnail-left > img:first-child, .item-thumbnail-left .item-image, .item-thumbnail-left .item-content > img:first-child, .item-thumbnail-left .item-content .item-image {
-  width: 120px;
-  height: 80px;
+  max-width: 50px;
+  max-height: 50px;
+  border: 3px solid #fff;
+}
+.item-thumbnail-right > img:first-child, .item-thumbnail-right .item-image, .item-thumbnail-right .item-content > img:first-child, .item-thumbnail-right .item-content .item-image {
+  max-width: 50px;
+  max-height: 50px;
+  border: 3px solid #fff;
+}
+a.item.item-thumbnail-left h3, a.item.item-thumbnail-left p {
+  color: #fff;
+  text-align: right;
+}
+a.item.item-thumbnail-right h3, a.item.item-thumbnail-right p {
+  color: #fff;
+  text-align: left;
+}
+a.item.item-thumbnail-left h3, .item.item-thumbnail-right h3 {
+  padding-top: 10px;
 }
 
 /*About*/
