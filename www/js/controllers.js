@@ -5,6 +5,14 @@ angular
 
   })
 
+  .controller('involvedCtrl', function($scope) {
+
+  })
+
+  .controller('resourcesCtrl', function($scope) {
+
+  })
+
   .controller('eventsCtrl', function($scope) {
 
     $scope.events = [{
@@ -107,15 +115,7 @@ angular
 
   })
 
-  .controller('resourcesCtrl', function($scope) {
-
-  })
-
   .controller('aboutCtrl', function($scope) {
-
-  })
-
-  .controller('chatroomCtrl', function($scope) {
 
   })
 

@@ -2,7 +2,6 @@
     <ion-content overflow-scroll="true" padding="true" class="has-header">
       <ion-list ng-controller="eventsCtrl">
         <ion-item ng-repeat="event in events" class="each-event">
-        <!-- class="item-thumbnail-left" -->
           <i class="icon {{event.icon}}"></i>
           <a ng-href="{{event.href}}"<h2>{{event.title}}</h2></a>
           <p class="the-event">{{event.date}}</p>

@@ -15,10 +15,10 @@ angular
       controller: 'dashboardCtrl'
     })
 
-    .state('events', {
-      url: '/events',
-      templateUrl: 'templates/events.html',
-      controller: 'eventsCtrl'
+    .state('involved', {
+      url: '/involved',
+      templateUrl: 'templates/involved.html',
+      controller: 'involvedCtrl'
     })
 
     .state('resources', {
@@ -33,10 +33,10 @@ angular
       controller: 'aboutCtrl'
     })
 
-    .state('chatroom', {
-      url: '/chatroom',
-      templateUrl: 'templates/chatroom.html',
-      controller: 'chatroomCtrl'
+    .state('events', {
+      url: '/events',
+      templateUrl: 'templates/events.html',
+      controller: 'eventsCtrl'
     })
 
     .state('feedback', {

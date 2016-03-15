@@ -1,10 +1,21 @@
 @import url(https://fonts.googleapis.com/css?family=Patrick+Hand);
 
+@font-face {
+    font-family: 'Hobo';
+    src:url('../fonts/Hobo.ttf.woff') format('woff'),
+        url('../fonts/Hobo.ttf.svg#Hobo') format('svg'),
+        url('../fonts/Hobo.ttf.eot'),
+        url('../fonts/Hobo.ttf.eot?#iefix') format('embedded-opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 /*Navigation Bar*/
 
 .bar {
   color: #fff;
   background-color: #02335e;
+  font-family: 'Hobo', sans-serif;
 }
 .ion-ios-arrow-back {
   color: #fff;
@@ -15,7 +26,7 @@
 
 /* Header Titles*/
 ion-view.title {
-  font-family: 'Patrick Hand', cursive;
+  font-family: 'Hobo', sans-serif;
 }
 
 /*Dashboard*/
@@ -50,27 +61,28 @@ div#touch-pad {
 ion-item.each-event {
   border-radius: 10px;
   margin: 20px;
-  background-color: rgba(188, 209, 210, 0.62);
+  background-color: #02335e;
   border-radius: 10px;
   box-shadow: inset 0px 0px 10px rgba(0,0,0,0.3);
 }
 a.ng-binding {
-  font-family: 'Patrick Hand', cursive;
+  font-family: 'Hobo', sans-serif;
   font-size: 22px;
-  color: #02335e;
+  color: #c228a2;
 }
 a.ng-binding:hover {
-  color: #c228a2;
+  color: #fff;
 }
 i.ion-woman, i.ion-wineglass {
    font-size: 32px;
-   color: #02335e;
+   color: #c228a2;
 }
 p.the-event {
+  color: #fff;
   padding-left: 30px;
 }
 button.button.button-full.button-ggd {
-  font-family: 'Patrick Hand', cursive;
+  font-family: 'Hobo', sans-serif;
   background-color: #fff;
   font-size: 24px;
   color: #c228a2;
@@ -78,7 +90,6 @@ button.button.button-full.button-ggd {
   font-weight: 900;
 }
 button.button.button-full.button-ggd:hover {
-  font-size: 28px;
   color: #02335e;
 }
 
@@ -102,7 +113,7 @@ span.card-title {
   font-weight: 500;
   text-align: center;
   color: #fff;
-  font-family: 'Patrick Hand', cursive;
+  font-family: 'Hobo', sans-serif;
 }
 a.item {
   background-color: #02335e;
@@ -148,7 +159,6 @@ div.card-action.involved p {
   text-align: center;
   font-style: italic;
 }
-
 .about-card {
   color: #fff;
   background-color: #02335e;
@@ -161,7 +171,7 @@ div.card-action.involved p {
 }
 span.card-title {
   text-align: center;
-  font-family: 'Patrick Hand', cursive;
+  font-family: 'Hobo', sans-serif;
 }
 div.card-action a {
   text-align: center;
@@ -171,12 +181,12 @@ div.card-action p {
   text-align: left;
 }
 a#email-links {
+  color: #c228a2;
   padding-top: 10px;
-  color: #fff;
   text-transform: none;
 }
 a#email-links:hover {
-  color: #c228a2;
+  color: #fff;
 }
 i {
   padding-right: 10px;
@@ -188,11 +198,34 @@ i.icon.ion-ios-people {
   font-size: 32px;
 }
 a#info-link {
-  color: #fff;
+  color: #c228a2;
   float: right;
   text-transform: none;
 }
 a#info-link:hover {
-  color: #c228a2;
+  color: #fff;
 }
+
+/* Get Involved */
+
+a#more-links {
+  color: #c228a2;
+  margin-top: 20px;
+  margin-right: 0;
+  text-align: right;
+  text-transform: none;
+}
+a#more-links:hover {
+  color: #fff;
+}
+
+i.icon.ion-email,
+i.icon.ion-information-circled {
+  font-size: 32px;
+}
+
+div.volunteer p {
+  text-align: center;
+}
+
 
