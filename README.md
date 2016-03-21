@@ -1,6 +1,6 @@
 #Girl Geek Dinner App
 
-This is an iphone/android app I created using the [Ionic](http://ionicframework.com/) framework. This is an app that aims to assist the local Girl Geek Dinner chapter with their mission to encourage and inspire Nashville's young women and girls to pursue technology careers. The app allows users to view the Girl Geek Dinner calendar as well as connects users to organizers and resources in the technology community.
+This is an iphone/android app I created using the [Ionic](http://ionicframework.com/) framework. This is an app that aims to assist the local [Girl Geek Dinner](http://ggdnashville.com/) chapter with their mission to encourage and inspire Nashville's young women and girls to pursue technology careers. The app allows users to view the Girl Geek Dinner calendar as well as connects users to organizers and resources in the technology community.
 
 ###Tools Used 
 
