@@ -1,24 +1,37 @@
-Ionic App Base
+#Girl Geek Dinner App
 
-A starting project for Ionic that optionally supports using custom SCSS.
+This is an iphone/android app I created using the [Ionic](http://ionicframework.com/) framework. This is an app that aims to assist the local Girl Geek Dinner chapter with their mission to encourage and inspire Nashville's young women and girls to pursue technology careers. The app allows users to view the Girl Geek Dinner calendar as well as connects users to organizers and resources in the technology community.
 
-## Using this project
+###Tools Used 
 
-We recommend using the [Ionic CLI](https://github.com/driftyco/ionic-cli) to create new Ionic projects that are based on this project but use a ready-made starter template.
+Gulp, Bower, Cordova Plugins
 
-For example, to start a new Ionic project with the default tabs interface, make sure the `ionic` utility is installed:
+##Getting Started
 
-```bash
-$ npm install -g ionic
+#####Clone the repo
+
+```
+git clone https://github.com/Jessawynne/ggd-template.git
 ```
 
-Then run:
+#####Install dependencies
 
-```bash
-$ ionic start myProject tabs
+``` 
+cd ./ggd-template/
+bower install
 ```
 
-More info on this can be found on the Ionic [Getting Started](http://ionicframework.com/getting-started) page and the [Ionic CLI](https://github.com/driftyco/ionic-cli) repo.
+#####To view app in browser:
 
-## Issues
-Issues have been disabled on this repo, if you do find an issue or have a question consider posting it on the [Ionic Forum](http://forum.ionicframework.com/).  Or else if there is truly an error, follow our guidelines for [submitting an issue](http://ionicframework.com/submit-issue/) to the main Ionic repository.
+```
+ionic serve
+```
+
+#####To build and emulate app in ios:
+
+```
+ionic platform add ios
+ionic build ios
+ionic emulate ios
+```
+
