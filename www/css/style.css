@@ -224,6 +224,14 @@ i.icon.ion-information-circled {
   font-size: 32px;
 }
 
+i.icon.ion-android-open {
+  font-size: 12px;
+  color: #c228a2;
+}
+i.icon.ion-android-open:hover {
+  color: #fff;
+}
+
 div.volunteer p {
   text-align: center;
 }

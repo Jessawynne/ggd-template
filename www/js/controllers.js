@@ -123,3 +123,7 @@ angular
 
   })
 
+  .controller('chatCtrl', function($scope) {
+
+  })
+

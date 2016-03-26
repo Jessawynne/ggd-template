@@ -15,6 +15,12 @@ angular
       controller: 'dashboardCtrl'
     })
 
+    .state('about', {
+      url: '/about',
+      templateUrl: 'templates/about.html',
+      controller: 'aboutCtrl'
+    })
+
     .state('involved', {
       url: '/involved',
       templateUrl: 'templates/involved.html',
@@ -27,10 +33,10 @@ angular
       controller: 'resourcesCtrl'
     })
 
-    .state('about', {
-      url: '/about',
-      templateUrl: 'templates/about.html',
-      controller: 'aboutCtrl'
+    .state('chat', {
+      url: '/chat',
+      templateUrl: 'templates/chat.html',
+      controller: 'chatCtrl'
     })
 
     .state('events', {
