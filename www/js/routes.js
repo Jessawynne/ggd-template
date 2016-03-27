@@ -3,10 +3,6 @@ angular
 
   .config(function($stateProvider, $urlRouterProvider) {
 
-  // Ionic uses AngularUI Router which uses the concept of states
-  // Learn more here: https://github.com/angular-ui/ui-router
-  // Set up the various states which the app can be in.
-  // Each state's controller can be found in controllers.js
   $stateProvider
 
     .state('dashboard', {
@@ -39,6 +35,18 @@ angular
       controller: 'chatCtrl'
     })
 
+    .state('rooms', {
+      url: '/rooms',
+      templateUrl: 'templates/rooms.html',
+      controller: 'chatCtrl'
+    })
+
+    .state('room', {
+      url: '/room',
+      templateUrl: 'templates/room.html',
+      controller: 'chatroomCtrl'
+    })
+
     .state('events', {
       url: '/events',
       templateUrl: 'templates/events.html',
@@ -51,8 +59,5 @@ angular
       controller: 'feedbackCtrl'
     })
 
-    $urlRouterProvider.otherwise('/dashboard')
-
-
-
+    $urlRouterProvider.otherwise('/dashboard');
 });

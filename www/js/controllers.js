@@ -123,7 +123,93 @@ angular
 
   })
 
-  .controller('chatCtrl', function($scope) {
+  .controller('chatCtrl', ['$scope', '$state', 'localStorageService', 'SocketService', function($scope, $state, localStorageService, SocketService) {
 
-  })
+    const me = this;
+
+    me.current_room = localStorageService.get('room');
+    me.rooms = ['Coding', 'Art', 'Writing', 'Travel', 'Business', 'Photography'];
+
+    $scope.login = function(username){
+        localStorageService.set('username', username);
+        $state.go('rooms');
+    };
+
+    $scope.enterRoom = function(room_name){
+
+        me.current_room = room_name;
+        localStorageService.set('room', room_name);
+
+        const room = {
+            'room_name': room_name
+        };
+
+        SocketService.emit('join:room', room);
+
+        $state.go('room');
+    };
+
+  }])
+
+  .controller('chatroomCtrl', ['$scope', '$state', 'localStorageService', 'SocketService', 'moment', '$ionicScrollDelegate', function($scope, $state, localStorageService, SocketService, moment, $ionicScrollDelegate) {
+
+    var me = this;
+
+        me.messages = [];
+
+        $scope.humanize = function(timestamp){
+            return moment(timestamp).fromNow();
+        };
+
+        me.current_room = localStorageService.get('room');
+
+        var current_user = localStorageService.get('username');
+
+        $scope.isNotCurrentUser = function(user){
+
+            if(current_user != user){
+                return 'not-current-user';
+            }
+            return 'current-user';
+        };
+
+
+        $scope.sendTextMessage = function(){
+
+            var msg = {
+                'room': me.current_room,
+                'user': current_user,
+                'text': me.message,
+                'time': moment()
+            };
+
+            me.messages.push(msg);
+            $ionicScrollDelegate.scrollBottom();
+
+            me.message = '';
+
+            SocketService.emit('send:message', msg);
+        };
+
+
+        $scope.leaveRoom = function(){
+            var msg = {
+                'user': current_user,
+                'room': me.current_room,
+                'time': moment()
+            };
+
+            SocketService.emit('leave:room', msg);
+            $state.go('rooms');
+
+        };
+
+
+        SocketService.on('message', function(msg){
+            me.messages.push(msg);
+            $ionicScrollDelegate.scrollBottom();
+        });
+
+
+  }])
 
