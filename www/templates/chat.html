@@ -1,14 +1,39 @@
 <ion-view title="Chat" ng-controller="chatCtrl">
     <ion-content overflow-scroll="true" padding="true" class="has-header">
-    <div class="list">
-        <label class="item item-input">
-            <input type="text" ng-model="username" placeholder="Username">
-        </label>
 
-        <div class="padding">
-            <button class="button button-positive button-block" ng-click="login(username)">Enter</button>
+      <div class="row">
+        <div class="col s12 m6">
+          <div class="card about-card">
+            <div class="card-content">
+            <span class="card-title">Come Chat With Us</span>
+              <div class="input-field list">
+                <label class="active" for="first_name"></label>
+                <input class="active" value="Username" type="text" ng-model="username">
+
+                  <div class="padding">
+                      <button class="btn" ng-click="login(username)">Enter</button>
+                  </div>
+              </div>
+            </div>
+          </div>
         </div>
-    </div>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     </ion-content>
 </ion-view>

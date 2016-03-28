@@ -1,19 +1,19 @@
 angular
   .module('app.controllers', [])
 
-  .controller('dashboardCtrl', function($scope) {
+  .controller('dashboardCtrl', function ($scope) {
 
   })
 
-  .controller('involvedCtrl', function($scope) {
+  .controller('involvedCtrl', function ($scope) {
 
   })
 
-  .controller('resourcesCtrl', function($scope) {
+  .controller('resourcesCtrl', function ($scope) {
 
   })
 
-  .controller('eventsCtrl', function($scope) {
+  .controller('eventsCtrl', function ($scope) {
 
     $scope.events = [{
       // #16 CP
@@ -115,101 +115,96 @@ angular
 
   })
 
-  .controller('aboutCtrl', function($scope) {
+  .controller('aboutCtrl', function ($scope) {
 
   })
 
-  .controller('feedbackCtrl', function($scope) {
+  .controller('feedbackCtrl', function ($scope) {
 
   })
 
   .controller('chatCtrl', ['$scope', '$state', 'localStorageService', 'SocketService', function($scope, $state, localStorageService, SocketService) {
 
-    const me = this;
+    const vm = this;
 
-    me.current_room = localStorageService.get('room');
-    me.rooms = ['Coding', 'Art', 'Writing', 'Travel', 'Business', 'Photography'];
+    vm.current_room = localStorageService.get('room');
+    vm.rooms = ['Introduce Yourself', 'Coding', 'Questions'];
 
-    $scope.login = function(username){
-        localStorageService.set('username', username);
-        $state.go('rooms');
+    $scope.login = function (username) {
+      localStorageService.set('username', username);
+      $state.go('rooms');
     };
 
-    $scope.enterRoom = function(room_name){
+    $scope.enterRoom = function (room_name) {
 
-        me.current_room = room_name;
-        localStorageService.set('room', room_name);
+      vm.current_room = room_name;
+      localStorageService.set('room', room_name);
 
-        const room = {
-            'room_name': room_name
-        };
+      const room = {
+        'room_name': room_name
+      };
 
-        SocketService.emit('join:room', room);
+      SocketService.emit('join:room', room);
 
-        $state.go('room');
+      $state.go('room');
     };
 
   }])
 
-  .controller('chatroomCtrl', ['$scope', '$state', 'localStorageService', 'SocketService', 'moment', '$ionicScrollDelegate', function($scope, $state, localStorageService, SocketService, moment, $ionicScrollDelegate) {
+  .controller('chatroomCtrl', ['$scope', '$state', 'localStorageService', 'SocketService', 'moment', '$ionicScrollDelegate', function ($scope, $state, localStorageService, SocketService, moment, $ionicScrollDelegate) {
 
-    var me = this;
+    const vm = this;
 
-        me.messages = [];
+    vm.messages = [];
 
-        $scope.humanize = function(timestamp){
-            return moment(timestamp).fromNow();
-        };
+    $scope.humanize = function (timestamp) {
+      return moment(timestamp).fromNow();
+    };
 
-        me.current_room = localStorageService.get('room');
+    vm.current_room = localStorageService.get('room');
 
-        var current_user = localStorageService.get('username');
+    const current_user = localStorageService.get('username');
 
-        $scope.isNotCurrentUser = function(user){
+    $scope.isNotCurrentUser = function (user) {
 
-            if(current_user != user){
-                return 'not-current-user';
-            }
-            return 'current-user';
-        };
+      if (current_user != user) {
+        return 'not-current-user';
+      }
+      return 'current-user';
+    };
 
+    $scope.sendTextMessage = function () {
 
-        $scope.sendTextMessage = function(){
+      const msg = {
+        'room': vm.current_room,
+        'user': current_user,
+        'text': vm.message,
+        'time': moment()
+      };
 
-            var msg = {
-                'room': me.current_room,
-                'user': current_user,
-                'text': me.message,
-                'time': moment()
-            };
+      vm.messages.push(msg);
+      $ionicScrollDelegate.scrollBottom();
 
-            me.messages.push(msg);
-            $ionicScrollDelegate.scrollBottom();
+      vm.message = '';
 
-            me.message = '';
+      SocketService.emit('send:message', msg);
+    };
 
-            SocketService.emit('send:message', msg);
-        };
+    $scope.leaveRoom = function () {
+      const msg = {
+        'user': current_user,
+        'room': vm.current_room,
+        'time': moment()
+      };
 
+      SocketService.emit('leave:room', msg);
+      $state.go('rooms');
+    };
 
-        $scope.leaveRoom = function(){
-            var msg = {
-                'user': current_user,
-                'room': me.current_room,
-                'time': moment()
-            };
-
-            SocketService.emit('leave:room', msg);
-            $state.go('rooms');
-
-        };
-
-
-        SocketService.on('message', function(msg){
-            me.messages.push(msg);
-            $ionicScrollDelegate.scrollBottom();
-        });
-
+    SocketService.on('message', function (msg) {
+      vm.messages.push(msg);
+      $ionicScrollDelegate.scrollBottom();
+    });
 
   }])
 
