@@ -293,4 +293,39 @@ a.btn.button-icon {
   box-shadow: none;
 }
 
+li.item {
+  background-color: rgba(188, 209, 210, 0.62);
+  border-radius: 10px;
+  box-shadow: inset 0px 0px 10px rgba(0,0,0,0.3);
+  border-radius: 10px;
+  margin: 20px;
+  padding: 0 10px;
+  color: #02335e;
+}
 
+li:last-of-type {
+  margin-bottom: 80px;
+}
+
+div.user-info {
+  text-align: right;
+  font-size: 12px;
+}
+
+label.footer-input {
+  background-color: #02335e;
+  color: #fff;
+}
+
+.bar-footer {
+  height: 70px;
+}
+
+a.btn.button-icon.icon.ion-chatbubbles {
+  color: #c228a2;
+}
+
+i.icon.ion-chatbubbles.this-pink {
+  color: #c228a2;
+  font-size: 24px;
+}

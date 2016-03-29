@@ -1,56 +1,35 @@
 <ion-view title="{{ roomCtrl.current_room }}" ng-controller="chatroomCtrl as roomCtrl">
   <header class="bar bar-header bar-positive">
     <h1 class="title">{{ roomCtrl.current_room }}</h1>
-    <button class="button button-assertive" ng-click="leaveRoom()">Leave</button>
+    <!-- <button class="button button-assertive" ng-click="leaveRoom()">Leave</button> -->
   </header>
 
   <ion-content class="has-header padding">
 
-  <div class="list" id="messages" ng-if="roomCtrl.messages.length > 0">
-      <li class="item item-text-wrap no-border {{ isNotCurrentUser(msg.user) }}" ng-repeat="msg in roomCtrl.messages">
-        <div class="msg">
-          <div class="details padding">
-          <p>
-            <div class="message">{{ msg.text }}</div>
-          </p>
-            <div class="user">posted by {{ msg.user }}</div>
-          <small>{{ humanize(msg.time) }}</small>
-          </div>
-        </div>
-      </li>
-  </div>
+    <div class="list" id="messages" ng-if="roomCtrl.messages.length > 0">
+        <li class="item item-text-wrap no-border {{ isNotCurrentUser(msg.user) }}" ng-repeat="msg in roomCtrl.messages">
+          <div class="msg">
+            <div class="details padding">
+            <p>
 
-  <div class="card" ng-if="!roomCtrl.messages.length">
-    <div class="item item-text-wrap">
-      No messages yet.
+              <div class="message"><i class="icon ion-chatbubbles this-pink"></i>{{ msg.text }}</div>
+            </p>
+              <div class="user-info user">posted by {{ msg.user }}</div>
+            <div class="user-info">{{ humanize(msg.time) }}</div>
+            </div>
+          </div>
+        </li>
     </div>
-  </div>
 
   </ion-content>
 
+  <footer class="bar bar-footer item-input-inset has-content">
 
-<footer class="bar bar-footer item-input-inset has-content">
+      <label class="footer-input item-input-wrapper">
+        <input type="text" id="message" name="message" ng-model="roomCtrl.message" placeholder="Chat Here">
+      </label>
+      <a class="btn button-icon icon ion-chatbubbles" ng-click="sendTextMessage()"></a>
 
-
-      <!-- <div class="card about-card">
-        <div class="card-content">
-        <span class="card-title">Come Chat With Us</span>
-          <div class="input-field list">
-            <label class="active" for="first_name"></label>
-            <input class="active" value="Username" type="text" ng-model="username">
-
-            <div class="padding">
-              <button class="btn" ng-click="login(username)">Enter</button>
-            </div>
-          </div>
-        </div>
-      </div> -->
-
-    <label class="item-input-wrapper">
-      <input type="text" id="message" name="message" ng-model="roomCtrl.message" placeholder="Type message">
-    </label>
-    <a class="btn button-icon icon ion-android-send" ng-click="sendTextMessage()"></a>
-
-</footer>
+  </footer>
 
 </ion-view>

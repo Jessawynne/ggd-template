@@ -1,28 +1,41 @@
-<ion-view title="Feedback" ng-controller="feedbackCtrl">
+<ion-view title="Contact" ng-controller="feedbackCtrl">
     <ion-content overflow-scroll="true" padding="true" class="has-header">
-      <div class="feedback-field">
 
-        <form name="feedbackForm" class="" novaildate form-manager>
-        <div class="list list-inset">
-            <label class="item item-input">
-                <span class="input-label">Enter Name</span>
-                <input ng-model="message.name" type="text" required>
-            </label>
-            <label class="item item-input">
-                <span class="input-label">Enter Email</span>
-                <input ng-model="message.email" type="email" required>
-            </label>
-            <label class="item item-input">
-                <span class="input-label">Subject</span>
-                <input ng-model="message.subject" type="text" required>
-            </label>
-            <label class="item item-input">
-                <span class="input-label">Comments</span><textarea ng-model="message.body" rows="3" required> </textarea>
-            </label>
+      <!-- Start Organizer Card -->
+      <div class="row">
+        <div class="col s12 m8 offset-m2 l6 offset-l3">
+          <div class="card about-card">
+            <div class="card-content">
+              <span class="card-title"><i class="icon ion-email"></i> Email Us</span>
+              <div class="card-action">
+                <div class="row">
+                  <div id="circle-image" class="col s2">
+                    <img src="../img/kristin_mckinney.jpg" alt="Kristin McKinney" class="circle responsive-img" width="50">
+                  </div>
+                  <a href="mailto:" id="email-links">Kristin McKinney</a>
+                </div>
+              </div>
+              <div class="card-action">
+                <div class="row">
+                  <a href="mailto:" id="email-links">Jessica Raines</a>
+                  <div id="circle-image" class="col s2">
+                    <img src="../img/jessica_raines.jpg" alt="Jessica Raines" class="circle responsive-img" width="50">
+                  </div>
+                </div>
+              </div>
+              <div class="card-action">
+                <div class="row">
+                  <div id="circle-image" class="col s2">
+                    <img src="../img/rainu_ittycheriah.jpg" alt="Rainu Ittycheriah" class="circle responsive-img" width="50">
+                  </div>
+                  <a href="mailto:" id="email-links">Rainu Ittycheriah</a>
+                </div>
+              </div>
+            </div>
           </div>
-        </form>
-        <button ng-click="reset()" class="button button-stable button-block ">Cancel</button>
-        <button ng-click="submit()" class="button button-stable button-block ">Send</button>
+        </div>
       </div>
+      <!-- End Organizer Card -->
+
     </ion-content>
 </ion-view>
