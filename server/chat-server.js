@@ -13,9 +13,9 @@ app.get('/', (req, res) => {
   res.render('index')
 })
 
-server.listen(PORT, () => {
-  console.log(`Server listening on port: ${PORT}`);
-})
+// server.listen(PORT, () => {
+//   console.log(`Server listening on port: ${PORT}`);
+// })
 
 io.on('connection', (socket) => {
 

@@ -213,7 +213,7 @@ angular
     };
 
     SocketService.on('message', function (msg) {
-      vm.messages.push(msg);
+      vm.messages = vm.messages.concat(msg);
       $ionicScrollDelegate.scrollBottom();
     });
 
