@@ -12,6 +12,7 @@
     "angular-socket-io": "^0.7.0",
     "socket.io-client": "sio-client#^1.4.4",
     "angular-moment": "^0.10.3",
-    "moment": "^2.12.0"
+    "moment": "^2.12.0",
+    "ngCordova": "^0.1.24-alpha"
   }
 }

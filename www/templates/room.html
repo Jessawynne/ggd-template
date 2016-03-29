@@ -29,11 +29,30 @@
   </ion-content>
 
 
-<footer class="bar bar-footer bar-positive item-input-inset has-content">
+<footer class="bar bar-footer item-input-inset has-content">
+
+
+      <!-- <div class="card about-card">
+        <div class="card-content">
+        <span class="card-title">Come Chat With Us</span>
+          <div class="input-field list">
+            <label class="active" for="first_name"></label>
+            <input class="active" value="Username" type="text" ng-model="username">
+
+            <div class="padding">
+              <button class="btn" ng-click="login(username)">Enter</button>
+            </div>
+          </div>
+        </div>
+      </div> -->
+
+
+
     <label class="item-input-wrapper">
       <input type="text" id="message" name="message" ng-model="roomCtrl.message" placeholder="Type message">
     </label>
-    <a class="button button-icon icon ion-android-send" ng-click="sendTextMessage()"></a>
+    <a class="btn button-icon icon ion-android-send" ng-click="sendTextMessage()"></a>
+
 </footer>
 
 </ion-view>

@@ -288,4 +288,9 @@ i.icon.ion-chevron-right {
   font-size: 16px;
 }
 
+a.btn.button-icon {
+  background-color: #02335e;
+  box-shadow: none;
+}
+
 

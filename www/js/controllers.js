@@ -119,7 +119,18 @@ angular
 
   })
 
-  .controller('feedbackCtrl', function ($scope) {
+  .controller('feedbackCtrl', function ($scope, $ionicLoading) {
+
+    $scope.message = {
+      'name': '',
+      'email': '',
+      'subject': '',
+      'body': ''
+    };
+
+    $scope.finalSubmit = function () {
+      $ionicLoading.show({ template: "Submitting...", duration: 1500})
+    }
 
   })
 
@@ -207,4 +218,3 @@ angular
     });
 
   }])
-

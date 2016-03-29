@@ -1,24 +1,28 @@
-<ion-view title="Feedback">
+<ion-view title="Feedback" ng-controller="feedbackCtrl">
     <ion-content overflow-scroll="true" padding="true" class="has-header">
       <div class="feedback-field">
-        <form class="list">
+
+        <form name="feedbackForm" class="" novaildate form-manager>
+        <div class="list list-inset">
             <label class="item item-input">
                 <span class="input-label">Enter Name</span>
-                <input type="text" placeholder="">
+                <input ng-model="message.name" type="text" required>
             </label>
             <label class="item item-input">
                 <span class="input-label">Enter Email</span>
-                <input type="email" placeholder="">
+                <input ng-model="message.email" type="email" required>
             </label>
             <label class="item item-input">
-                <span class="input-label">Enter Phone #</span>
-                <input type="tel" placeholder="">
+                <span class="input-label">Subject</span>
+                <input ng-model="message.subject" type="text" required>
             </label>
             <label class="item item-input">
-                <span class="input-label">Comments</span><textarea placeholder=""> </textarea>
+                <span class="input-label">Comments</span><textarea ng-model="message.body" rows="3" required> </textarea>
             </label>
+          </div>
         </form>
-        <button class="button button-stable button-block ">Submit</button>
+        <button ng-click="reset()" class="button button-stable button-block ">Cancel</button>
+        <button ng-click="submit()" class="button button-stable button-block ">Send</button>
       </div>
     </ion-content>
 </ion-view>

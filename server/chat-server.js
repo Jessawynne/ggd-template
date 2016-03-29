@@ -13,22 +13,25 @@ app.get('/', (req, res) => {
   res.render('index')
 })
 
-io.on('connection', function(socket){
+server.listen(PORT, () => {
+  console.log(`Server listening on port: ${PORT}`);
+})
 
-  socket.on('join:room', function(data){
+io.on('connection', (socket) => {
+
+  socket.on('join:room', (data) => {
     var room_name = data.room_name;
     socket.join(room_name);
   });
 
-  socket.on('leave:room', function(msg){
+  socket.on('leave:room', (msg) => {
     msg.text = msg.user + ' has left the room';
     socket.leave(msg.room);
     socket.in(msg.room).emit('message', msg);
   });
 
-  socket.on('send:message', function(msg){
+  socket.on('send:message', (msg) => {
     socket.in(msg.room).emit('message', msg);
   });
-
 
 });
